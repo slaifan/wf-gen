@@ -1,0 +1,60 @@
+version: "2.1"
+services:
+  wireguard:
+    image: linuxserver/wireguard
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - SERVERURL=172.16.236.15
+      - SERVERPORT=51820 #optional
+      - PEERS=1 #optional
+      - PEERDNS=auto #optional
+      - INTERNAL_SUBNET=172.16.236.0/24 #optional
+    volumes:
+      - ./config:/config
+      - /lib/modules:/lib/modules
+    networks:
+      capture:
+        ipv4_address: 172.16.236.15
+    ports:
+      - 51820:51820/udp
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+      - net.ipv6.conf.all.disable_ipv6=0
+    restart: always
+   
+  
+  dummy:
+    image: 'ubuntu'
+    networks:
+      - capture
+    depends_on:
+      - wireguard
+      
+  client:
+    build: ./clients/
+    container_name: client
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    networks:
+      capture:
+        ipv4_address: 172.16.236.38
+    depends_on:
+      - dummy
+      
+networks:
+  capture:
+    driver: "bridge"
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.16.236.0/24
+        gateway: 172.16.236.5
+
+

@@ -1,0 +1,104 @@
+version: '3.7'
+
+
+services:
+
+### TO DO: ADD WIREGUARD SERVER CONTAINER, ADD CONFIG TO EXISTING WG CLIENT VOLUME, GIVE THEM DIFFERENT IPS
+
+  # wireguard-server:
+  #   image: linuxserver/wireguard
+  #   container_name: wireguard-server
+  #   cap_add:
+  #     - NET_ADMIN
+  #     - SYS_MODULE
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=1000
+  #     - TZ=Europe/London
+  #     - SERVERPORT=51820 #optional
+  #     - PEERS=1 #optional
+  #     - PEERDNS=auto #optional
+  #     - INTERNAL_SUBNET=10.13.13.0 #optional
+  #   volumes:
+  #     - ./wireguard/:/config
+  #     - /lib/modules:/lib/modules
+  #   ports:
+  #     - 51820:51820/udp
+  #   sysctls:
+  #     - net.ipv4.conf.all.src_valid_mark=1
+  #   restart: unless-stopped
+  #   # networks:
+  #   #   backbone:
+  #   #     ipv4_address: 172.16.236.33
+
+  wireguard:
+    image: linuxserver/wireguard
+    container_name: wireguard
+    restart: unless-stopped
+    # networks:
+    #   backbone:
+    #     ipv4_address: 172.16.236.44
+    volumes:
+      - './wireguard-config/peer1/peer1.conf:/config/wg0.conf'
+      - '/lib/modules:/lib/modules:ro'
+    environment:
+      - PUID=1000
+      - PGID=1000
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+      - net.ipv6.conf.all.disable_ipv6=0
+
+  client:
+    depends_on:
+      - wireguard
+    build: './client'
+    container_name: client
+    volumes:
+      - './client/src:/src/'
+    network_mode: service:wireguard
+
+    
+  dummy:
+    image: 'ubuntu'
+    networks:
+      - backbone
+    depends_on:
+      - client
+      
+  tcpdump_client:
+    build: './tcpdump'
+    command: not(ip6) -v -w "/data/dump-client-${CAPTURETIME}-$REPNUM.pcap"
+    volumes:
+      - './data:/data'
+    network_mode: "service:client"
+    depends_on:
+      - dummy
+      
+  tcpdump_vpn_client:
+    build: './tcpdump'
+    command: not(ip6) -v -w "/data/dump-vpn-client-${CAPTURETIME}-$REPNUM.pcap"
+    volumes:
+      - './data:/data'
+    network_mode: "service:wireguard"
+    depends_on:
+      - dummy
+
+  # tcpdump_vpn:
+  #   build: '../tcpdump'
+  #   command: not(ip6) -v -w "/data/dump-vpn-server-${CAPTURETIME}-$REPNUM.pcap"
+  #   volumes:
+  #     - './data:/data'
+  #   network_mode: "service:wireguard-server"
+  #   depends_on:
+  #     - dummy
+
+networks:
+  backbone:
+    driver: bridge
+    ipam:
+          driver: default
+          config:
+          - subnet: 172.16.236.0/24

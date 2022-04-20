@@ -1,0 +1,31 @@
+version: '2'
+
+services:
+  server:
+    build: 
+      context: './server'
+    ports:
+      - 8080:443
+      - 8081:80
+    networks:
+      capture:
+        ipv4_address: 172.16.236.15
+
+  client:
+    build: 
+      context: './client'
+    command: watch -n 5 curl "https://server:443"
+    depends_on:
+      - server
+    networks:
+      capture:
+        ipv4_address: 172.16.236.40
+
+networks:
+  capture:
+    driver: "bridge"
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.16.236.0/24
+        gateway: 172.16.236.1

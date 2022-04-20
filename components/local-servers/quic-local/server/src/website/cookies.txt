@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.ed.ac.uk	TRUE	/	FALSE	1999999999	SimpleSAMLEdWebSession	54c6c282391959d8ed4147e4902b8796
+www.ed.ac.uk	TRUE	/	FALSE	1999999999	SameSite	None
+

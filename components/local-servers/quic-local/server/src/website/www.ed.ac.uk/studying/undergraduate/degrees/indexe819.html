@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+
+<!-- Mirrored from www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&code=VL46 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Apr 2022 18:45:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"1120039961",accountID:"3410652",trustKey:"66686",xpid:"VwIGUVBWChABVFVaAQEAVlMG",licenseKey:"NRJS-626e96c9d654b24db05",applicationID:"1048607077"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(32),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(33),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError";if(!c.disabled){var l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(14),t(13),"addEventListener"in window&&t(7),c.xhrWrappable&&t(15),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){U++,L=g.hash,this[u]=y.now()}function o(){U--,g.hash!==L&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable&&!y.disabled){var x=t(11),b=t(12),E=t(9),R=t(7),O=t(14),T=t(8),S=t(15),P=t(10),M=t("ee"),C=M.get("tracer"),N=t(23);t(17),y.features.spa=!0;var L,U=0;M.on(u,r),b.on(p,r),P.on(p,r),M.on(d,o),b.on(l,o),P.on(l,o),M.buffer([u,d,"xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),S.buffer([u,"new-xhr","send-xhr"+s]),T.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),C.buffer([u,"no-"+u]),P.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,m+s),a(T,m+"-done"),a(P,"new-jsonp"),a(P,"jsonp-end"),a(P,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,N(!0)),w[v]("load",i,N(!0)),w[v]("popstate",function(){i(0,U>1)},N(!0))}},{}],5:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function o(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+p])try{window.performance[h](m,o,!1)}catch(t){}else try{window.performance[h]("webkit"+m,o,!1)}catch(t){}}function i(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(14),f=t(13),u=t(6),d=t(23),p="learResourceTimings",l="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",O=t("loader");if(!O.disabled){O.features.stn=!0,t(9),"addEventListener"in window&&t(7);var T=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof T&&(this.bstStart=O.now())}),a.on(b,function(t,e){var n=t[0];n instanceof T&&s("bst",[n,e,this.bstStart,O.now()])}),c.on(x,function(t,e,n){this.bstStart=O.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),this.bstType])}),f.on(x,function(){this.bstStart=O.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=O.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):l in window.performance&&(window.performance["c"+p]?window.performance[l](m,o,d(!1)):window.performance[l]("webkit"+m,o,d(!1))),document[l]("scroll",i,d(!1)),document[l]("keypress",i,d(!1)),document[l]("click",i,d(!1))}}},{}],6:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],7:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],8:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(33),a=t(32);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],9:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],10:[function(t,e,n){function r(t){function e(){f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}function n(){f.emit("jsonp-error",[],l),f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var d=s(a),p="function"==typeof d.parent[d.key];if(p){var l={};u.inPlace(d.parent,[d.key],"cb-",l),t.addEventListener("load",e,c(!1)),t.addEventListener("error",n,c(!1)),f.emit("new-jsonp",[t.src],l)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(d);return e?e[1]:null}function a(t,e){var n=t.match(l),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(p);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t(23),f=t("ee").get("jsonp"),u=t("wrap-function")(f);if(e.exports=f,o()){var d=/[?&](?:callback|cb)=([^&#]+)/,p=/(.*)\.([^.]+)/,l=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?u.inPlace(Node.prototype,h,"dom-"):(u.inPlace(HTMLElement.prototype,h,"dom-"),u.inPlace(HTMLHeadElement.prototype,h,"dom-"),u.inPlace(HTMLBodyElement.prototype,h,"dom-")),f.on("dom-start",function(t){r(t[0])})}},{}],11:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],12:[function(t,e,n){function r(t){var e=i.context(),n=s(t,"executor-",e,null,!1),r=new f(n);return i.context(r).getCtx=function(){return e},r}var o=t("wrap-function"),i=t("ee").get("promise"),a=t("ee").getOrSetContext,s=o(i),c=t(32),f=NREUM.o.PR;e.exports=i,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){i.emit("propagate",[null,!o],a,!1,!1),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var a=e.apply(f,arguments),s=f.resolve(a);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&i.emit("propagate",[t,!0],n,!1,!1),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),o.wrapInPlace(f.prototype,"then",function(t){return function(){var e=this,n=o.argsToArray.apply(this,arguments),r=a(e);r.promise=e,n[0]=s(n[0],"cb-",r,null,!1),n[1]=s(n[1],"cb-",r,null,!1);var c=t.apply(this,n);return r.nextPromise=c,i.emit("propagate",[e,!0],c,!1,!1),c}}),i.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this,null,!1),t[1]=s(t[1],"resolve-",this,null,!1)}),i.on("executor-err",function(t,e,n){t[1](n)}),i.on("cb-end",function(t,e,n){i.emit("propagate",[n,!0],this.nextPromise,!1,!1)}),i.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=i.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],13:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],14:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],15:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,O.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(7);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=t(23),l=NREUM.o,h=l.XHR,m=l.MO,v=l.PR,w=l.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,o,p(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,O=document.createTextNode(R);new m(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],16:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=l.generateSpanId(),m=l.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&p())&&(w.traceContextParentHeader=o(h,m),w.traceContextStateHeader=i(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",s=1,c="",f="";return o+"@nr="+i+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function p(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var l=t(29),h=t(18);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],17:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function o(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(18),f=t(16).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(24),m=t(22),v=t(19),w=t(23),g=t(25).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(15),t(8),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){i(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},i=this.target;if("string"==typeof i?n=i:"object"==typeof i&&i instanceof y?n=i.url:window.URL&&"object"==typeof i&&i instanceof URL&&(n=i.href),o(this,n),"data"!==this.params.protocol){var s=(""+(i&&i instanceof y&&i.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],18:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("https://www.ed.ac.uk/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],19:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(22);e.exports=r},{}],20:[function(t,e,n){function r(){}function o(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),i(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var i=t("handle"),a=t(32),s=t(33),c=t("ee").get("tracer"),f=t("loader"),u=t(25),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",h=l+"ixn-";a(p,function(t,e){d[e]=o(l,e,!0,"api")}),d.addPageAction=o(l,"addPageAction",!0),d.setCurrentRouteName=o(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=o(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),i("err",[t,f.now(),!1,e])}},{}],21:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],22:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],23:[function(t,e,n){var r=!1;try{var o=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,o),window.removeEventListener("testPassive",null,o)}catch(i){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],24:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],25:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return i("storeMetric",n,null,"api"),n}function o(t,e){var n=[s,t,{name:t},e];return i("storeEventMetrics",n,null,"api"),n}var i=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:o}},{}],26:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-a}function o(){return i}var i=(new Date).getTime(),a=i,s=t(34);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=o},{}],27:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],28:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var o=[r],i=a({});i&&o.push(i),l("lcp",o)}}function i(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,l("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),l("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,p,l=t("handle"),h=t("loader"),m=t(31),v=t(23),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(o);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}p=new PerformanceObserver(i);try{p.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],29:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(31)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],30:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],31:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[i]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,o(!1))}var o=t(23);e.exports=r;var i,a,s;"undefined"!=typeof document.hidden?(i="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],32:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],33:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],34:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,o,i,a){if(a!==!1&&(a=!0),!l.aborted||i){t&&a&&t(n,r,o);for(var s=e(o),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var p=d[y[n]];return p&&p.push([x,n,r,s]),s}}function i(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return p[t]=p[t]||o(n)}function w(t,e){l.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:i,addEventListener:i,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function i(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",f=t("gos"),u=t(32),d={},p={},l=e.exports=o();e.exports.getOrSetContext=i,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!S++){var t=T.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(R,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+T.offset],null,"api"),s("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https:///")?r.src=t.agent:r.src=h+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function o(){"complete"===v.readyState&&i()}function i(){s("mark",["domContent",a()+T.offset],null,"api")}var a=t(26),s=t("handle"),c=t(32),f=t("ee"),u=t(30),d=t(27),p=t(21),l=t(23),h=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,w="addEventListener",g="attachEvent",y=m.XMLHttpRequest,x=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var E=""+location,R={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1215.min.js"},O=y&&x&&x[w]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:u,disabled:b};if(!b){t(20),t(28),v[w]?(v[w]("DOMContentLoaded",i,l(!1)),m[w]("load",r,l(!1))):(v[g]("onreadystatechange",o),m[g]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var S=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var i,a,u,p;try{a=this,i=d(arguments),u="function"==typeof r?r(i,a):r||{}}catch(l){o([l,"",[i,a,c],u],t)}s(n+"start",[i,a,c],u,f);try{return p=e.apply(a,i)}catch(h){throw s(n+"err",[i,a,h],u,f),h}finally{s(n+"end",[i,a,p],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,i(e,nrWrapper,t),nrWrapper)}function r(t,e,r,o,i){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,o,c,i))}function s(n,r,i,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,i,e,a)}catch(c){o([c,n,r,i],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=p,n}function o(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function i(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(i){o([i],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function s(t,e){var n=e(t);return n[p]=t,i(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(33),p="nr@original",l=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,17,5,3,4]);</script>
+<meta name="keywords" content="Archaeology and Social Anthropology,MA,Archaeology,anthropology,archaeology,humanities,social,society,sociology,anthropological,fieldwork,archaeological,history,culture,civilisation,,entry,requirements, prospectus,2023" />
+<meta name="description" content="Study MA Archaeology and Social Anthropology at the University of Edinburgh: entry requirements and what you will study." />
+<meta http-equiv="last-modified" content="2022-02-28" />
+<meta property="og:image" content="https://www.ed.ac.uk/sites/all/themes/uoe/assets/uoe-logo-centred-black.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://www.ed.ac.uk/sites/all/themes/uoe/assets/uoe-logo-centred-black.png" />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<meta property="og:site_name" content="The University of Edinburgh" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ed.ac.uk/studying/undergraduate/degrees" />
+<meta property="og:title" content="Degree finder" />
+<meta property="og:description" content="Undergraduate degree finder" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.ed.ac.uk/sites/all/themes/uoe/favicon/favicon-32x32.png?t=ra7t2j" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.ed.ac.uk/sites/all/themes/uoe/favicon/favicon-16x16.png?t=ra7t2j" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.ed.ac.uk/sites/all/themes/uoe/favicon/apple-touch-icon.png?t=ra7t2j" />
+<link rel="manifest" href="https://www.ed.ac.uk/sites/all/themes/uoe/favicon/manifest.json?t=ra7t2j" />
+<link rel="mask-icon" href="https://www.ed.ac.uk/sites/all/themes/uoe/favicon/safari-pinned-tab.svg?t=ra7t2j" color="#041e42" />
+<link rel="shortcut icon" href="https://www.ed.ac.uk/sites/all/themes/uoe/favicon/favicon.ico?t=ra7t2j" />
+<meta name="msapplication-config" content="https://www.ed.ac.uk/sites/all/themes/uoe/favicon/browserconfig.xml?t=ra7t2j" />
+<meta name="theme-color" content="#ffffff" />
+<script type="text/x-mathjax-config">MathJax.Hub.Config({ root: '/sites/all/libraries/mathjax', config: ['TeX-AMS_HTML.js'] });</script>
+  <title>MA Archaeology and Social Anthropology | The University of Edinburgh</title>
+  <link type="text/css" rel="stylesheet" href="https://www.ed.ac.uk/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ed.ac.uk/sites/default/files/css/css_ojfOql0nepjjf4kg3_L_istc3jDh-fDqyxsNX8xBepU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ed.ac.uk/sites/default/files/css/css_MyWDaTYJ8HptD9VZaoeC4LYnWG3odu8SG1aysnIriKA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ed.ac.uk/sites/default/files/css/css_jykKXy9eBxwcjqdeTsukSZslB5RoJEWPNx_ZEnzBBNg.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ed.ac.uk/sites/default/files/css/css_Yt0mtu0At3VB3Zbccv7vKzoQx40-EzYwecPvXmjMkzU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ed.ac.uk/sites/default/files/css/css_WeUBYpoJyzHr1loJ3I6AJcvnOctU129IlM2VWQ8kPVc.css" media="all" />
+  <!--[if lt IE 9]><script src="https://www.ed.ac.uk/sites/all/themes/uoe/assets/html5shiv.min.js" />
+<script src="https://www.ed.ac.uk/sites/all/themes/uoe/assets/respond.min.js" />
+<![endif]-->  <script src="https://www.ed.ac.uk/sites/default/files/js/js_kvUVSilWM-IIgEfNst0Hzvehv6h4fkwF9PPxDmNfaJw.js"></script>
+<script>window.uoe_gdpr = {"default_id":"GTM-TQN45VX","overrides":{"necessary":"GTM-TQN45VX","necessary,performance":"GTM-NDT8TCN","advertising,necessary":"GTM-WHQZZ56","advertising,necessary,performance":"GTM-WJ5TMV5"}}</script>
+<script src="https://www.ed.ac.uk/sites/default/files/js/js_k1hq1P2R5lYgEz6qAzy7DQ4anXk7ArwkXuAwmGAOW_k.js"></script>
+<script>document.createElement( "picture" );</script>
+<script src="https://www.ed.ac.uk/sites/default/files/js/js_TbdyH2159JFq-G27M2lLxROdHCKltZuZ5YF1efV4Wv8.js"></script>
+<script>/* UG custom JS for Drupal proxy */
+/* For use with all UG proxy pages using UG version v1.9.0+ */
+/* Changes to this file must be made in the IS GitLab repository */
+
+jQuery( document ).ready(function() {
+
+    (function (d) {
+    "use strict";
+    var widgetScript = d.createElement('script');
+    widgetScript.id = 'unistats-widget-script';
+    widgetScript.src = 'http://widget.unistats.ac.uk/js/unistats.widget.js';
+    var scriptTags = d.getElementsByTagName('script')[0];
+    if (d.getElementById('unistats-widget-script')) { return; }
+    scriptTags.parentNode.insertBefore(widgetScript, scriptTags);
+    } (document));
+
+    jQuery("#proxy_btnApplying").click(function () {
+        jQuery('#proxy_collapseHowToApply').collapse('show');
+        jQuery('html, body').animate({
+            scrollTop: jQuery('#proxy_collapseHowToApply').offset().top
+        }, 500);
+    });
+
+    jQuery("#proxy_btnFindDegree").click(function () {
+        jQuery('#proxy_collapseDegrees').collapse('show');
+        jQuery('html, body').animate({
+            scrollTop: jQuery('#proxy_collapseDegrees').offset().top
+        }, 500);
+    });
+
+    jQuery("#proxy_btnExpandAllSubjects").click(function () {
+        jQuery('#proxy_subjectAccordion .panel-collapse').collapse('show');
+    });
+
+    jQuery("#proxy_btnContractAllSubjects").click(function () {
+        jQuery('#proxy_subjectAccordion .panel-collapse').collapse('hide');
+    });
+
+    jQuery("#proxy_btnExpandAllProgrammes").click(function () {
+        jQuery('#proxy_programmeAccordion .panel-collapse').collapse('show');
+    });
+
+    jQuery("#proxy_btnContractAllProgrammes").click(function () {
+        jQuery('#proxy_programmeAccordion .panel-collapse').collapse('hide');
+    });
+
+    jQuery('.panel-collapse').on('hidden.bs.collapse', function () {
+        var icon = jQuery(this).prev().children().children("a").children("span");
+        icon.removeClass("glyphicon-minus-sign");
+        icon.addClass("glyphicon-plus-sign");
+    });
+
+    jQuery('.panel-collapse').on('shown.bs.collapse', function () {
+        var icon = jQuery(this).prev().children().children("a").children("span");
+        icon.removeClass("glyphicon-plus-sign");
+        icon.addClass("glyphicon-minus-sign");
+    });
+
+    jQuery("#proxy_quoteImageContainer img").on("error", function () {
+        jQuery('#proxy_quoteText').addClass("col-md-12");
+        jQuery('#proxy_quoteText').removeClass("col-md-9");
+        jQuery('#proxy_quoteImageContainer').addClass("hidden");
+    });
+
+    // required for IE as images may load prior to document ready
+    try{
+        var w = jQuery("#proxy_quoteImage")[0].naturalWidth;;
+        var h = jQuery("#proxy_quoteImage")[0].naturalHeight;;
+        var size = w+h;
+
+        if(isNaN(size) || size <= 0){
+                jQuery('#proxy_quoteText').addClass("col-md-12");
+                jQuery('#proxy_quoteText').removeClass("col-md-9");
+                jQuery('#proxy_quoteImage').addClass("hidden");
+            } 
+    }
+    catch(err) {
+        // error if element not present which is ok
+    }
+});
+ </script>
+<script src="https://www.ed.ac.uk/sites/default/files/js/js_c01ZwDXxuc6FSNoO9EFSwcInNfuUpjPtJrcfiKvyCvg.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"uoe","theme_token":"DSPA_vLPogUFlOemWMHktHP-10SNM8rqu7UUq5PU9R0","js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"sites\/all\/modules\/features\/uoe_jquery\/js\/jquery-migrate-1.2.1.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"0":1,"sites\/all\/libraries\/mathjax\/MathJax.js":1,"sites\/all\/themes\/uoe\/assets\/theme-cookie.js":1,"1":1,"sites\/all\/modules\/custom\/uoe_gdpr\/js\/google.js":1,"sites\/all\/modules\/contrib\/webform_steps\/webform_steps.js":1,"2":1,"sites\/all\/themes\/uoe\/assets\/theme.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/custom\/uoe_scald\/uoe_scald.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"sites\/all\/modules\/contrib\/scald_file\/scald_file.css":1,"sites\/all\/modules\/custom\/uoe_contact_info\/uoe_contact_info.css":1,"sites\/all\/modules\/custom\/uoe_html_atom\/uoe_html_atom.css":1,"sites\/all\/modules\/custom\/uoe_streaming_media_atom\/uoe_streaming_media_atom.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/custom\/uoe_admin\/uoe_admin.icons.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/geshifilter\/geshifilter.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"public:\/\/uoe_proxy\/parsed_css\/style1467296.css":1,"sites\/all\/themes\/uoe\/assets\/theme.css":1,"sites\/all\/themes\/uoe\/node.css":1,"public:\/\/uoe_resource\/css\/edweb_additional_css_styles_v1.1.css":1,"public:\/\/uoe_resource\/css\/degree_finder_fix_16-11.css":1,"public:\/\/uoe_resource\/css\/cookie-alertstyles.css":1,"public:\/\/uoe_resource\/css\/media-container.css":1,"public:\/\/uoe_resource\/css\/overlayfix.css":1,"public:\/\/uoe_resource\/css\/s2030-v1.9.7.css":1,"public:\/\/uoe_resource\/css\/edinburgh-impact-v1.1.css":1}},"ckeditor_tabber":{"elements":"dl.ckeditor-tabber"},"currentPath":"node\/28392","currentPathIsAdmin":false,"ogContext":{"groupType":"node","gid":"26745"},"bootstrap":{"anchorsFix":"0","anchorsSmoothScrolling":"0","formHasError":1,"popoverEnabled":"0","popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":"0","tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-28392 node-type-uoe-proxy og-context og-context-node og-context-node-26745 mlid-31270" itemscope itemtype="http://schema.org/WebPage">
+  <div id="skip-link">
+    <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+  </div>
+    <div class="region region-page-top">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQN45VX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  </div>
+  
+
+<nav class="navbar navbar-default" role="navigation" aria-label="Section navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle"
+              data-toggle="collapse" data-target="#uoe-navbar-collapse"
+              aria-controls="uoe-navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle section links</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+          <div class="collapse navbar-collapse" id="uoe-navbar-collapse">
+              <ul class="menu nav navbar-nav"><li class="first leaf"><a href="https://www.ed.ac.uk/studying" title="">Study</a></li>
+<li class="leaf"><a href="https://www.ed.ac.uk/global" title="">Global</a></li>
+<li class="leaf"><a href="https://www.ed.ac.uk/visit" title="">Visit</a></li>
+<li class="leaf"><a href="https://www.ed.ac.uk/research" title="">Research</a></li>
+<li class="leaf"><a href="https://www.ed.ac.uk/news" title="">News</a></li>
+<li class="leaf"><a href="https://www.ed.ac.uk/about" title="">About</a></li>
+<li class="leaf"><a href="https://www.ed.ac.uk/alumni" title="">Alumni</a></li>
+<li class="leaf"><a href="https://www.ed.ac.uk/local" title="">Local</a></li>
+<li class="leaf"><a href="https://www.ed.ac.uk/staff" title="">Staff</a></li>
+<li class="last leaf"><a href="https://www.ed.ac.uk/students" title="">Students</a></li>
+</ul>                  </div>
+    
+  </div>
+</nav>
+
+<div class="page-head">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 col-md-8">
+        <a href="https://www.ed.ac.uk/"><img class="uoe-logo" src="https://www.ed.ac.uk/sites/all/themes/uoe/assets/logo.png" alt="The University of Edinburgh home" /></a>      </div>
+
+            <div class="col-sm-5 col-md-4">
+        <div class="page-head-text">
+          <ul class="list-inline text-right">
+            <li><a href="https://www.ed.ac.uk/schools-departments/">Schools &amp; departments</a></li>
+            <li><a href="https://www.myed.ed.ac.uk/">MyEd</a></li>
+          </ul>
+        </div>
+        <div role="search" class="page-head-search">
+          <form action="https://search.ed.ac.uk/" method="get"><div class="form-group">
+  <label for="uoe-search" class="sr-only">Search: </label>
+  <div class="input-group">
+    <input id="uoe-search" type="search" placeholder="Search" class="form-control form-control-page-head" data-items="4" data-provide="uoe-search" name="q">
+    <span class="input-group-btn">
+  <button class="btn btn-page-head">
+    <span class="glyphicon glyphicon-search" aria-hidden="true"></span><span class="sr-only">Search</span>
+  </button>
+</span>
+  </div>
+</div></form>        </div>
+      </div>
+          </div>
+  </div>
+</div>
+
+  <div class="page-head-hero" >
+              <a href="https://www.ed.ac.uk/studying/undergraduate">
+        <picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="https://www.ed.ac.uk/sites/default/files/styles/banner_breakpoints_theme_uoe_tv_1x/public/banner/undergrad-2022-banner.jpg?itok=uA4wA8Dp&amp;timestamp=1614952297 1x" media="only screen and (min-width: 1200px)" />
+<source srcset="https://www.ed.ac.uk/sites/default/files/styles/banner_breakpoints_theme_uoe_desktop_1x/public/banner/undergrad-2022-banner.jpg?itok=kOaME7jA&amp;timestamp=1614952297 1x" media="(min-width: 992px)" />
+<source srcset="https://www.ed.ac.uk/sites/default/files/styles/banner_breakpoints_theme_uoe_tablet_1x/public/banner/undergrad-2022-banner.jpg?itok=QD3am_Ir&amp;timestamp=1614952297 1x" media="(min-width: 768px)" />
+<source srcset="https://www.ed.ac.uk/sites/default/files/styles/banner_breakpoints_theme_uoe_mobile_1x/public/banner/undergrad-2022-banner.jpg?itok=g4RSNEW4&amp;timestamp=1614952297 1x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<img  src="https://www.ed.ac.uk/sites/default/files/styles/banner_breakpoints_theme_uoe_mobile_1x/public/banner/undergrad-2022-banner.jpg?itok=g4RSNEW4&amp;timestamp=1614952297" alt="Undergraduate study - 2023 entry" title="" />
+</picture>          <div class="container container-page-head-brand">
+        <div class="row">
+                      <div class="col-xs-4 col-xs-offset-8 col-sm-3 col-sm-offset-9 col-lg-2 col-lg-offset-10">
+                      <div class="page-head-brand">
+              <picture >
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="https://www.ed.ac.uk/sites/default/files/styles/subsite_brand_landscape_breakpoints_theme_uoe_tv_1x/public/edweb-marque-sub-brand_1.png?itok=rhqzS_93&amp;timestamp=1614952367 1x" media="only screen and (min-width: 1200px)" />
+<source srcset="https://www.ed.ac.uk/sites/default/files/styles/subsite_brand_landscape_breakpoints_theme_uoe_desktop_1x/public/edweb-marque-sub-brand_1.png?itok=nHgDpo1T&amp;timestamp=1614952367 1x" media="(min-width: 992px)" />
+<source srcset="https://www.ed.ac.uk/sites/default/files/styles/subsite_brand_landscape_breakpoints_theme_uoe_tablet_1x/public/edweb-marque-sub-brand_1.png?itok=ODneNxUT&amp;timestamp=1614952367 1x" media="(min-width: 768px)" />
+<source srcset="https://www.ed.ac.uk/sites/default/files/styles/subsite_brand_landscape_breakpoints_theme_uoe_mobile_1x/public/edweb-marque-sub-brand_1.png?itok=ppFJ9fDk&amp;timestamp=1614952367 1x" media="(min-width: 0px)" />
+<!--[if IE 9]></video><![endif]-->
+<img  src="https://www.ed.ac.uk/sites/default/files/styles/subsite_brand_landscape_breakpoints_theme_uoe_mobile_1x/public/edweb-marque-sub-brand_1.png?itok=ppFJ9fDk&amp;timestamp=1614952367" alt="Open to the world" title="" />
+</picture>            </div>
+          </div>
+        </div>
+      </div>
+              </a>
+        
+        <div class="container"><div class="page-head-title">
+                          <div class="h1"><a href="https://www.ed.ac.uk/studying/undergraduate">Undergraduate study - 2023 entry</a></div>
+                  </div></div>
+      </div>
+
+<div class="container container-page-content">
+
+  
+  
+  
+  <div class="row">
+          <div class="col-sm-3 col-uoe-nav">
+          <div class="region region-sidebar-first">
+    <section id="block-uoe-menu-uoe-menu-block" class="block block-uoe-menu clearfix">
+
+      
+  <nav aria-label="Content navigation"><h2 class="uoe-nav-trigger">Menu</h2><ul class="uoe-nav"><li class="uoe-published menu-item-29623"><a href="https://www.ed.ac.uk/studying/undergraduate">Undergraduate study - 2023 entry home</a><ul><li class="uoe-nav-ancestor uoe-published menu-item-31270"><a href="https://www.ed.ac.uk/studying/undergraduate/degrees" class="active">Degree finder</a><ul><li class="uoe-nav-expanded"><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=subject&amp;code=30">Subject: Archaeology</a><ul><li class="uoe-nav-active"><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VL46">MA Archaeology and Social Anthropology</a></li></ul></li></ul></li></ul></li></ul></nav>
+</section>
+  </div>
+      </div>
+
+      <div class="col-sm-9">
+    
+          <div class="row breadtrail">
+                  <div class="col-sm-9 col-md-10" itemprop="breadcrumb">
+            <nav aria-label="Breadcrumbs">
+              <ol class="breadcrumb"><li><a href="https://www.ed.ac.uk/">Home</a></li>
+<li><a href="https://www.ed.ac.uk/studying">Study</a></li>
+<li><a href="https://www.ed.ac.uk/studying/undergraduate">Undergraduate study</a></li>
+<li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees" class="active">Degree finder</a></li>
+<li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=subject&amp;code=30">Subject: Archaeology</a></li>
+<li>MA Archaeology and Social Anthropology</li>
+</ol>            </nav>
+          </div>
+                          <div class="col-sm-3 col-md-2">
+             <a href="https://www.ed.ac.uk/studying/undergraduate/contacts" class="btn btn-uoe btn-block contact-link">Contact us</a>          </div>
+              </div>
+    
+    <a id="main-content" tabindex="-1"></a>
+    
+                        <h1 itemprop="headline" class="page-header">MA Archaeology and Social Anthropology</h1>
+                
+      <div class="region region-content" itemprop="mainContentOfPage">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  
+
+	
+
+	
+
+	
+
+	<div class="row">
+    	<div id="proxy_leftContent" class="col-md-8">
+
+    					<div id="proxy_programmeSummary">
+	    		<div id="proxy_information" class="row">
+	    						        <div class="col-md-6" id="proxy_leftSummary">
+			        	<p><span>UCAS code:</span> VL46</p>			        	<p><span>Duration:</span> 4 years</p>			        	<p><span>Delivery:</span> Full-time</p>			        </div>
+			        
+			        			        <div class="col-md-6" id="proxy_rightSummary">
+			        	<p><span>School:</span> History, Classics and Archaeology</p>			        	<p><span>College:</span> Arts, Humanities &amp; Social Sciences</p>			        </div>
+			        		    	</div>
+		      
+		      			    	<div id="proxy_icons" class="row">
+			    				    				        <div class="col-md-4">
+			        	<span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Study abroad
+			        </div>
+			        			    			    	</div>
+		    			      
+		    </div>
+			
+						<div id="proxy_introduction" class="row">
+				<div class="col-xs-12">
+					<h2>Introducing MA Archaeology and Social Anthropology</h2>
+					<p>Archaeology and social anthropology is the study of past and present human behaviour. This programme examines the diversity of human social and material culture both ancient and modern. Your undergraduate dissertation at the end of this programme can be in either subject.</p>
+
+<h3>Archaeology</h3>
+
+<p>Archaeology is the study of the entirety of our human past from the origins of humans several million years ago up to recent times within living memory. Archaeologists study surviving material or physical remains to reconstruct the lives, societies and cultures of past peoples.</p>
+
+<h3>Social Anthropology</h3>
+
+<p>In contrast, social anthropology is the study of human behaviour in living societies. Understanding a living society and its members involves participant observation. This can involve spending many months or even years living with, and sharing the experiences of, the people being studied.</p>
+
+<p>Societies around the world vary enormously socially, culturally and politically. The study of these variations, and the common humanity that underlies them, is at the heart of social anthropology.</p>
+
+<h3>Practical skills and fieldwork</h3>
+
+<p>We emphasise the importance of training in practical archaeological skills. You can gain hands-on experience of artefact identification and analysis in practical sessions using artefacts from our own Vere Gordon Childe collection.</p>
+
+<p>You will also complete three weeks of archaeological fieldwork at the end of Year 1 and have the option to undertake further fieldwork.</p>
+
+<p>In later years of study you will also take part in projects in heritage management and public engagement, and the lab-based analysis of archaeological remains.</p>
+
+<p>If you choose to do a dissertation in social anthropology you can conduct your own research for this in the summer break between Year 3 and Year 4.</p>				</div>
+			</div>
+			
+			
+			<div id="proxy_accordionButtonsContainer" class="row">
+		      <div class="col-md-12">
+		        <div class="btn-group pull-right" role="group" aria-label="expand or contract accordions">
+		          <button id="proxy_btnExpandAllProgrammes" type="button" class="btn btn-uoe">Expand all <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></button>
+		          <button id="proxy_btnContractAllProgrammes" type="button" class="btn btn-uoe">Contract all <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></button>
+		        </div>
+		      </div>
+		    </div>
+
+		    <div id="proxy_accordionContainer" class="row">
+		    	<div class="col-lg-12">
+			    	<div class="panel-group" id="proxy_programmeAccordion">
+
+									    		<div class="panel">
+			                <div class="panel-heading">
+			                	<h2 class="panel-title">
+			                		<a data-toggle="collapse" data-parent="#programmeAccordion" href="#proxy_collapseWhatStudy"><span class="glyphicon glyphicon-plus-sign pull-right"></span>What you will study</a>
+			                	</h2>
+		                	</div>
+		                	<div id="proxy_collapseWhatStudy" class="panel-collapse collapse">
+		                  		<div class="panel-body">
+			                    	<h3>Year 1</h3><h4>Archaeology</h4>
+
+<p>In Year 1 you will study Archaeology 1A and Archaeology 1B.</p>
+
+<p>These courses offer a broad introduction to our human past. They cover the period from the evolution of the first humans several million years ago, to the emergence of farming and the development of civilisations in Europe, Egypt and the Near East.</p>
+
+<p>These courses also cover the key techniques that archaeologists use, including:</p>
+
+<ul>
+<li>methods of site discovery, excavation and recording and analysing artefacts </li>
+<li>more recent and innovative approaches to reconstruct the lifeways of past peoples, including the scientific analysis of animal and human remain </li>
+</ul>
+
+<h4>Social Anthropology</h4>
+
+<p>You will study introductory courses in social anthropology.</p>
+
+<p>Social Anthropology 1A: The Life Course introduces you to the practice of social anthropology and includes such themes as:</p>
+
+<ul>
+<li>gender </li>
+<li>personhood </li>
+<li>work and making a living </li>
+<li>the house </li>
+<li>consumption and exchange </li>
+<li>health </li>
+<li>the body </li>
+</ul>
+
+<p>Social Anthropology 1B: Anthropology Matters asks what anthropology has to say about some of the most important issues facing us today. The course examines how anthropology contributes to answering questions about how our contemporary societies work.</p>
+
+<p>The issues explored will vary from year-to-year. Examples include:</p>
+
+<ul>
+<li>climate change </li>
+<li>hunger </li>
+<li>wellbeing </li>
+<li>body modification </li>
+<li>human rights </li>
+</ul>
+
+<h4>Option courses and fieldwork</h4>
+
+<p>You will choose from a wide range of option courses outside your primary subjects.</p>
+
+<p>Over the long vacation at the end of Year 1, you will undertake three weeks of fieldwork.</p>
+<h3>Year 2</h3><h4>Archaeology</h4>
+
+<p>You will study the archaeology of Scotland, from the earliest evidence of human occupation at the end of the last ice age to the Roman incursion in the early 1st millennium AD.</p>
+
+<p>Key themes include:</p>
+
+<ul>
+<li>the world heritage sites in the 'heart' of Scotland (such as Neolithic Orkney) </li>
+<li>human-environment interaction </li>
+<li>the ways in which the environment shapes human behaviour </li>
+<li>the lasting impact activities such as farming had on the Scottish landscape </li>
+</ul>
+
+<p>A field trip to visit archaeological sites and visits to the Museum of Scotland are core components of this course.</p>
+
+<p>You will also study Archaeology in Action. This develops your understanding of professional archaeological practice. It also explores exciting innovations in archaeological methods through real-world applications and hands-on practical exercises.</p>
+
+<h4>Social Anthropology</h4>
+
+<p>In Ethnography: Theory and Practice, you will study the theory and practice of ethnographic fieldwork through:</p>
+
+<ul>
+<li>practical group work involving participant observation </li>
+<li>writing of field-notes </li>
+<li>conducting interviews </li>
+</ul>
+
+<p>Social Anthropology 2: Key Concepts introduces you to the major ideas that define social anthropology today and the historical development of anthropological thought.</p>
+
+<h4>Option courses and fieldwork</h4>
+
+<p>You will again choose from a wide range of option courses outside your primary subjects.</p>
+
+<p>You may have opportunities, normally in the vacations after Years 2 and 3, to complete archaeology fieldwork or other practical assignments in the UK or abroad. Such work is optional, but can be assessed as part of your programme.</p>
+<h3>Year 3</h3><h4>Archaeology</h4>
+
+<p>You will:</p>
+
+<ul>
+<li>Study Theoretical Archaeology. This explores the history of archaeology from its antiquarian beginnings in the 18th-19th centuries and its development as an academic discipline. </li>
+<li>Consider the theories that archaeologists have used to understand and interpret the remains that they have found and examine how these ideas have changed over the past 150 years. </li>
+<li>Study Archaeology in Practice. This focuses on the contemporary practice of archaeology in the UK as well as internationally, providing an insight into the practical skills required of professional archaeologists. </li>
+</ul>
+
+<h4>Social Anthropology</h4>
+
+<p>You will choose at least two social anthropology courses from a range of courses on important anthropological themes, including:</p>
+
+<ul>
+<li>anthropological theory </li>
+<li>kinship </li>
+<li>ritual and religion </li>
+<li>consumption, exchange and technology </li>
+</ul>
+
+<h4>Option courses</h4>
+
+<p>You will select a further two courses from available option courses in archaeology and social anthropology.</p>
+
+<p>Honours level courses in archaeology can focus on a time period or a geographic area, for example:</p>
+
+<ul>
+<li>Mesolithic and Neolithic Europe </li>
+<li>the prehistoric Mediterranean </li>
+<li>ancient Egypt </li>
+</ul>
+
+<p>Alternatively, courses can focus on a particular theme or approach, such as:</p>
+
+<ul>
+<li>archaeology of human remains </li>
+<li>archaeological illustration </li>
+<li>conflict archaeology </li>
+<li>ritual and monumentality </li>
+<li>scientific methods in bio-archaeology </li>
+</ul>
+
+<h4>Dissertation choice</h4>
+
+<p>If you choose, at this stage, to write your dissertation in social anthropology, you will also have the opportunity to conduct your own research in the summer break between Year 3 and Year 4.</p>
+
+<p>Your dissertation supervisor will help you to plan and develop your research project which can take place in the UK or overseas.</p>
+
+<p>You will also take the course Imagining Anthropological Research in preparation for your fieldwork.</p>
+<h3>Year 4</h3><p>In Year 4, you will:</p>
+
+<ul>
+<li>Choose two archaeology courses and two social anthropology courses from a wide range of honours-level options.</li>
+<li>Complete a dissertation. This can be written and supervised either in archaeology or in social anthropology, or on a topic bridging these disciplines.</li>
+</ul>
+			                  	</div>
+		                	</div>
+		              	</div>
+		              	
+		              				    		<div class="panel">
+			                <div class="panel-heading">
+			                	<h2 class="panel-title">
+			                		<a data-toggle="collapse" data-parent="#programmeAccordion" href="#proxy_collapseWhereStudy"><span class="glyphicon glyphicon-plus-sign pull-right"></span>Where you will study</a>
+			                	</h2>
+		                	</div>
+		                	<div id="proxy_collapseWhereStudy" class="panel-collapse collapse">
+		                  		<div class="panel-body">
+		                  						                    		<h3>Our facilities</h3>
+			                    		<p>The School of History, Classics and Archaeology is located in the heart of the city, within the University's Central Area. Here you will have access to:</p>
+
+<ul>
+<li>a range of study spaces </li>
+<li>our Student Research Room </li>
+<li>research collections </li>
+<li>an undergraduate common room </li>
+</ul>
+
+<p>You will also have access to the University's libraries and computing facilities, located in George Square.</p>
+
+<p>You will be taught in a range of lecture theatres and seminar rooms within the School and across the University's Central Area. Some of your classes will also take place at the National Museum of Scotland.</p>
+
+<p>We have five archaeological research and teaching laboratories. These include post-excavation processing and wet chemistry labs and a large teaching laboratory for the study of skeletal remains.</p>
+
+<h4>Take a virtual tour</h4>
+
+<p>You can take a closer look at the School of History, Classics and Archaeology and explore our facilities and campus on the University's Virtual Visit site.</p>
+
+<p><a href="https://virtualvisits.ed.ac.uk/ug/explore-for-yourself/ug-archaeology_undergraduate">Take a virtual tour of the School of History, Classics and Archaeology</a></p>
+
+<h4>External resources</h4>
+
+<p>As well as using our own resources and those of the University Library, you can apply for access to the outstanding collections of the:</p>
+
+<ul>
+<li>National Library of Scotland</li>
+<li>National Museum of Scotland</li>
+</ul>			                    				                    				                    				                    		<h3>Study abroad</h3>
+			                       		<p>There are plenty of opportunities to study abroad in Year 3 by applying for one of the University’s many international exchanges.</p>
+
+<p>These cover many parts of the world, including:</p>
+
+<ul>
+<li>Europe </li>
+<li>North and South America </li>
+<li>Australia </li>
+<li>New Zealand </li>
+<li>Asia </li>
+</ul>
+
+<p>These are unique opportunities to immerse yourself in different university systems and cultures.</p>
+
+<p>There will normally be opportunities to complete archaeological fieldwork or other practical assignments in locations outside the UK.</p>
+
+<p><a href="https://edin.ac/abroad-funding">What are my options for going abroad?</a></p>			                    				                  	</div>
+		                	</div>
+		              	</div>
+		              	
+		              				    		<div class="panel">
+			                <div class="panel-heading">
+			                	<h2 class="panel-title">
+			                		<a data-toggle="collapse" data-parent="#programmeAccordion" href="#proxy_collapseLearning"><span class="glyphicon glyphicon-plus-sign pull-right"></span>Learning and assessment</a>
+			                	</h2>
+		                	</div>
+		                	<div id="proxy_collapseLearning" class="panel-collapse collapse">
+		                  		<div class="panel-body">
+			                    	<h3>How will I learn?</h3><p>You will be taught by experienced staff with international expertise, through a mix of:</p>
+
+<ul>
+<li>lectures </li>
+<li>seminars </li>
+<li>tutorials </li>
+<li>field trips </li>
+<li>lab-based practicals or workshops examining a wide range of archaeological materials </li>
+</ul>
+
+<p>In the summer vacation at the end of Year 1 you will normally complete three weeks of fieldwork either inside or outside of the UK.</p>
+
+<p>Fieldwork or other practical work in later years is optional, but it can contribute towards your final degree and can also contribute to your dissertation research.</p>
+<h3>How will I be assessed?</h3>
+<p>You will be assessed primarily through coursework and exams. Some classes also include assessed oral presentations, practicals and/or group work.</p>
+			                  	</div>
+		                	</div>
+		              	</div>
+		              	
+		              				    		<div class="panel">
+			                <div class="panel-heading">
+			                	<h2 class="panel-title">
+			                		<a data-toggle="collapse" data-parent="#programmeAccordion" href="#proxy_collapseCareers"><span class="glyphicon glyphicon-plus-sign pull-right"></span>Career opportunities</a>
+			                	</h2>
+		                	</div>
+		                	<div id="proxy_collapseCareers" class="panel-collapse collapse">
+		                  		<div class="panel-body">
+			                    	<p>With an archaeology qualification from the University of Edinburgh, you will:</p>
+
+<ul>
+<li>Gain practical, social, intellectual and theoretical skills. </li>
+<li>Learn to think logically through developing sound research and analytical skills. </li>
+<li>Be able to compile and critically evaluate evidence in order to formulate and present an argument coherently. </li>
+<li>Become familiar with a range of disciplines, enabling you to demonstrate intellectual flexibility and the ability to quickly adapt to new situations. </li>
+</ul>
+
+<p>Through fieldwork, you will develop a range of practical archaeological skills. These will enable you to appreciate more fully our human environment and its role in the contemporary world.</p>
+
+<h4>Where our graduates work</h4>
+
+<p>Many archaeology graduates find employment as professional archaeologists working for:</p>
+
+<ul>
+<li>government agencies </li>
+<li>universities </li>
+<li>museums and heritage organisations </li>
+<li>applied archaeological companies/consultancies </li>
+</ul>
+
+<p>Our graduates are also well-rounded people with a range of transferable skills that will give you the opportunity to pursue a broad range of careers, for example in:</p>
+
+<ul>
+<li>business </li>
+<li>management </li>
+<li>teaching </li>
+<li>journalism </li>
+<li>the police </li>
+<li>the civil service</li>
+</ul>			                  	</div>
+		                	</div>
+		              	</div>
+		              	
+									    		<div class="panel">
+			                <div class="panel-heading">
+			                	<h2 class="panel-title">
+			                		<a data-toggle="collapse" data-parent="#programmeAccordion" href="#proxy_collapseEntry"><span class="glyphicon glyphicon-plus-sign pull-right"></span>Entry requirements</a>
+			                	</h2>
+		                	</div>
+		                	<div id="proxy_collapseEntry" class="panel-collapse collapse">
+		                  		<div class="panel-body">
+			                    	<h3>Standard entry requirement</h3><p>The standard entry requirement is:</p><ul><li><abbr title="Scottish Qualifications Authority">SQA</abbr> Highers: ABBB by end of S5 or AABB/ABBBB by end of S6. BBB must be achieved in one year of S4-S6.</li><li> A Levels: ABB.</li><li><abbr title="International Baccalaureate">IB</abbr>: 34 points with 655 at HL.</li></ul><h3>Minimum entry requirement</h3><p>The minimum entry requirement for widening access applicants is:</p><ul><li><abbr title="Scottish Qualifications Authority">SQA</abbr> Highers: ABBB by end of S6. BBB must be achieved in one year of S4-S6.</li><li> A Levels: ABB.</li><li><abbr title="International Baccalaureate">IB</abbr>: 34 points with 655 at HL.</li></ul><p><a href="http://www.edin.ac/ugdf-contextual">More information for widening access applicants</a></p><h3>Required subjects</h3><p>The grades used to meet our entry requirements must include:</p><ul><li><abbr title="Scottish Qualifications Authority">SQA</abbr>: Highers: no specific Higher subjects required. National 5s: English at C.</li><li> A Levels: no specific A Level subjects required. GCSEs: English at C or 4.</li><li><abbr title="International Baccalaureate">IB</abbr>: HL: no specific subjects required. SL: English at 5.</li></ul><p><a href="http://www.edin.ac/ugdf-entry">Find out more about entry requirements</a></p><h3>International applicants</h3><p>We welcome applications from students studying a wide range of international qualifications.</p><p><a href="http://www.edin.ac/ugdf-int-entry-country">Entry requirements by country</a></p><h4>International Foundation Programme</h4><p>If you are an international student and your school qualifications are not accepted for direct entry to the University you may be eligible for admission to this degree programme through our International Foundation Programme.</p><p><a href="http://www.edin.ac/ugdf-int-foundation">International Foundation Programme</a></p><h3>Mature applicants</h3><p>We welcome applications from mature students and accept a range of qualifications.</p><p><a href="http://www.edin.ac/ugdf-mature-applicants">Mature applicant qualifications</a></p>			                  	</div>
+		                	</div>
+		              	</div>
+		              	
+		              	
+		              				    		<div class="panel">
+			                <div class="panel-heading">
+			                	<h2 class="panel-title">
+			                		<a data-toggle="collapse" data-parent="#programmeAccordion" href="#proxy_collapseELR"><span class="glyphicon glyphicon-plus-sign pull-right"></span>English language requirements</a>
+			                	</h2>
+		                	</div>
+		                	<div id="proxy_collapseELR" class="panel-collapse collapse">
+		                  		<div class="panel-body">
+			                    	<p>You must demonstrate a level of English language competency at a level that will enable you to succeed in your studies, regardless of your nationality or country of residence.</p>
+
+<h3><abbr title="Scottish Qualifications Authority">SQA</abbr>, <abbr title="General Certificate of Secondary Education">GCSE</abbr> and <abbr title="International Baccalaureate">IB</abbr></h3>
+
+<p>For <abbr title="Scottish Qualifications Authority">SQA</abbr>, <abbr title="General Certificate of Secondary Education">GCSE</abbr> and <abbr title="International Baccalaureate">IB</abbr> students, unless a higher level is specified in the stated entry requirements, a pass is required in English at the following grades or higher:</p>
+
+<ul>
+<li><abbr title="Scottish Qualifications Authority">SQA</abbr> National 5 at C </li>
+<li><abbr title="Scottish Qualifications Authority">SQA</abbr> Standard Grade at 3 </li>
+<li><abbr title="General Certificate of Secondary Education">GCSE</abbr> at C or 4 </li>
+<li>Level 2 Certificate at C </li>
+<li><abbr title="International Baccalaureate">IB</abbr> Standard Level at 5 (English ab initio is not accepted for entry)</li>
+</ul>
+
+<h3>English language tests</h3>
+
+<p>We accept the following English language qualifications at the grades specified:</p>
+
+<ul>
+<li><abbr title="International English Language Testing System">IELTS</abbr> Academic: total 6.5 with at least 5.5 in each component.</li>
+<li><abbr title="Internet-based Test of English as a Foreign Language">TOEFL-iBT</abbr> (including Home Edition): total 92 with at least 20 in each component. We do not accept TOEFL MyBest Score to meet our English language requirements.</li>
+<li><abbr title="Certificate in Advanced English">CAE</abbr> and <abbr title="Certificate of Proficiency in English">CPE</abbr>: total 176 with at least 162 in each component.</li>
+<li>Trinity <abbr title="Integrated Skills in English">ISE</abbr>: <abbr title="Integrated Skills in English">ISE</abbr> II with distinctions in all four components.</li>
+<li><abbr title="Pearson Test of English">PTE</abbr> Academic: total 62 with at least 54 in each component.</li>
+</ul>
+
+<p>We also accept a wider range of international qualifications and tests.</p>
+
+<p>English language qualifications must be no more than three and a half years old from the start date of the degree you are applying to study, unless you are using <abbr title="International English Language Testing System">IELTS</abbr>, TOEFL, Trinity <abbr title="Integrated Skills in English">ISE</abbr>, or <abbr title="Pearson Test of English">PTE</abbr>, in which case it must be no more than two years old.</p>
+
+<p><a href="https://www.ed.ac.uk/studying/international/english/ug-english">English language requirements</a></p>			                  	</div>
+		                	</div>
+		              	</div>
+		              	
+		              	
+		              				    		<div class="panel">
+			                <div class="panel-heading">
+			                	<h2 class="panel-title">
+			                		<a data-toggle="collapse" data-parent="#programmeAccordion" href="#proxy_collapseKIS"><span class="glyphicon glyphicon-plus-sign pull-right"></span>Discover Uni data</a>
+			                	</h2>
+		                	</div>
+		                	<div id="proxy_collapseKIS" class="panel-collapse collapse">
+		                  		<div class="panel-body">
+			                    	<p>This information is part of a government initiative to enhance the material that higher education institutions provide about their degree programmes.</p>
+
+<p>It is one of many sources of information which will enable you to make an informed decision on what and where to study.</p>
+
+<p>Please note that some programmes do not have Discover Uni data available.</p>			                  	</div>
+		                	</div>
+		              	</div>
+		              	
+		              				    		<div class="panel">
+			                <div class="panel-heading">
+			                	<h2 class="panel-title">
+								<a data-toggle="collapse" data-parent="#programmeAccordion" href="#proxy_collapseFees"><span class="glyphicon glyphicon-plus-sign pull-right"></span>Fees, costs and funding</a>								</h2>
+		                	</div>
+		                	<div id="proxy_collapseFees" class="panel-collapse collapse">
+		                  		<div class="panel-body">
+			                    	<h3>Tuition Fees</h3><p><a href="http://www.ed.ac.uk/studying/undergraduate/fees?programme_code=UTARCSA">Tuition fees for MA Archaeology and Social Anthropology</a></p><h3>Additional costs</h3><p></p><p>In Year 1, we expect you to take part in an archaeological fieldwork project. Normally, the minimum requirement is three weeks of field experience. Archaeological projects often charge a participation fee.</p>
+
+<p>We are able to make a contribution towards your mandatory fieldwork in Year 1, and also to fieldwork and practical work in later years if it contributes to your programme. However, the overall cost to you will depend on the type of work you choose and the location.</p>
+
+<p>In later years, you may opt to undertake additional practical archaeological work in the vacations following Year 2 and 3. If you study abroad in Year 3, your costs will vary by country.</p>
+
+<p>Research for a dissertation in social anthropology may incur additional costs when conducted overseas. Most students incur no additional costs as they either remain in the UK or do their research while studying abroad in Year 3.</p><h3>Funding</h3><p>For more information on how much it will cost to study with us and the financial support available see our fees and funding information.</p><p><a href="http://www.ed.ac.uk/studying/undergraduate/fees-finance">Fees and funding</a></p>			                  	</div>
+		                	</div>
+		              	</div>
+		              	
+						<div class="panel">
+			                <div class="panel-heading">
+			                	<h2 class="panel-title">
+			                		<a data-toggle="collapse" data-parent="#programmeAccordion" href="#proxy_collapseEnquiries"><span class="glyphicon glyphicon-plus-sign pull-right"></span>Enquiries</a>
+			                	</h2>
+		                	</div>
+		                	<div id="proxy_collapseEnquiries" class="panel-collapse collapse">
+		                  		<div class="panel-body">
+		                  			<ul class="contactList">
+		                  				<li id="proxy_contactTitle"><span>Have a query about undergraduate study?</span></li>
+<li id="proxy_contactForm"><span><a href="https://www.ed.ac.uk/studying/undergraduate/contacts">Send an enquiry</a></span></li>
+									</ul>
+			                  	</div>
+		                	</div>
+		              	</div>
+
+									    		<div class="panel visible-xs-block visible-sm-block">
+			                <div class="panel-heading">
+			                	<h2 class="panel-title">
+			                		<a data-toggle="collapse" data-parent="#programmeAccordion" href="#proxy_collapseDegrees"><span class="glyphicon glyphicon-plus-sign pull-right"></span>Degrees in Archaeology</a>
+			                	</h2>
+		                	</div>
+		                	<div id="proxy_collapseDegrees" class="panel-collapse collapse in">
+		                  		<div class="panel-body">
+		                  					                  				<h3>4 degrees in Archaeology</h3>
+		                  				<ul id="proxy_degreeList">
+			                  				<li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VV41">Ancient Mediterranean Civilisations (MA) VV41</a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=V400">Archaeology (MA) V400</a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VV1A">Archaeology and Ancient History (MA) VV1A</a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VL46">Archaeology and Social Anthropology (MA) VL46</a>
+</li>										</ul>
+			                  					                  				                  				<h3>You may also be interested in</h3>
+		                  				<ul id="proxy_relatedDegreeList">
+			                  				<li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VVH4">Architectural History and Archaeology (MA) VVH4</a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VV14">Classical Archaeology and Ancient History (MA) VV14</a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=QV84">Classical Archaeology and Greek (MA) QV84</a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VQ46">Classical Archaeology and Latin (MA) VQ46</a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=Q800">Classics (MA) Q800</a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VV1K">History and Archaeology (MA) VV1K</a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VV94">Scottish Ethnology and Archaeology (MA) VV94</a>
+</li>										</ul>
+			                  				                  			
+			                  	</div>
+		                	</div>
+		              	</div>
+						
+			    	</div>
+		    	</div>
+		    </div>
+
+
+			<div id="proxy_callsToActionMain" class="row visible-xs-block visible-sm-block">
+    			<div class="col-xs-12">
+	    			<ul class="cta">
+										  <li><a href="http://www.edin.ac/ugdf-apply"><span class="glyphicon glyphicon-info-sign"></span>How to apply</a></li>
+										  <li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=subject&amp;code=30"><span class="glyphicon glyphicon-question-sign"></span>Why choose Archaeology</a></li>
+					</ul>
+				</div>
+    		</div>
+
+
+			<div id="proxy_relatedLinksMain" class="row visible-md-block visible-lg-block">
+				<div class="col-md-12">
+					<h2>More information</h2>
+										<p>
+						<a href="http://www.edin.ac/ugdf-apply">How to apply</a>
+					</p>
+										<p>
+						<span>School:</span> <a href="https://www.ed.ac.uk/history-classics-archaeology">History, Classics and Archaeology</a>
+					</p>
+					<p>
+						<span>College:</span> <a href="https://www.ed.ac.uk/arts-humanities-soc-sci">Arts, Humanities &amp; Social Sciences</a>
+					</p>
+				</div>
+			</div>
+    	</div>
+
+    	<div id="proxy_rightContent" class="col-md-4">
+
+    		<div id="proxy_relatedLinksAside" class="row visible-xs-block visible-sm-block">
+				<div class="col-md-12">
+					<h2>More information</h2>
+										<p>
+						<a href="http://www.edin.ac/ugdf-apply">How to apply</a>
+					</p>
+										<p>
+						<span>School:</span> <a href="https://www.ed.ac.uk/history-classics-archaeology">History, Classics and Archaeology</a>
+					</p>
+					<p>
+						<span>College:</span> <a href="https://www.ed.ac.uk/arts-humanities-soc-sci">Arts, Humanities &amp; Social Sciences</a>
+					</p>
+				</div>
+			</div>
+    		
+    		<div class="row" id="proxy_searchBlock">
+    			<div class="col-xs-12">
+    				
+
+<h2>Search the degree finder</h2>
+
+<form action="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php" method="get" class="finder-search" id="proxy_pgSearch_md">
+  <input type="hidden" name="action" value="search" />
+  <div class="row">
+    <div class="col-xs-12">
+      <label for="proxy_proxy_search" class="sr-only">Search: </label>
+      <div class="input-group">
+        <input type="text" class="form-control input-lg" value="" name="searchString" id="proxy_search" placeholder="Search" />
+        <span class="input-group-btn">
+          <button class="btn btn-lg btn-uoe" type="submit" id="proxy_search_submit"><span class="glyphicon glyphicon-search"></span><span class="sr-only">Search</span></button>
+        </span>
+      </div>
+    </div>
+  </div>
+ </form>    			</div>
+    		</div>
+
+    		<div class="row" id="proxy_azLinkBlock">
+    			<div class="col-xs-12">
+    				<a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=degreeList">A-Z of degrees</a>
+    			</div>
+    		</div>
+
+    		<div id="proxy_callsToActionAside" class="row visible-md-block visible-lg-block">
+    			<div class="col-xs-12">
+	    			<ul class="cta">
+										  <li><a href="http://www.edin.ac/ugdf-apply"><span class="glyphicon glyphicon-info-sign"></span>How to apply</a></li>
+										  <li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=subject&amp;code=30"><span class="glyphicon glyphicon-question-sign"></span>Why choose Archaeology</a></li>
+					</ul>
+				</div>
+    		</div>
+
+    		<div id="proxy_degreeListAside" class="row visible-md-block visible-lg-block">
+    			<div class="col-xs-12">
+    				              			              				<h2>4 degrees in Archaeology</h2>
+              				<ul id="proxy_asideDegreeList">
+                  				<li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VV41">Ancient Mediterranean Civilisations (MA) <span class="ucasCode">VV41</span></a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=V400">Archaeology (MA) <span class="ucasCode">V400</span></a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VV1A">Archaeology and Ancient History (MA) <span class="ucasCode">VV1A</span></a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VL46">Archaeology and Social Anthropology (MA) <span class="ucasCode">VL46</span></a>
+</li>							</ul>
+                  		                  		              				<h2>You may also be interested in</h2>
+              				<ul id="proxy_asideRelatedDegreeList">
+                  				<li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VVH4">Architectural History and Archaeology (MA) <span class="ucasCode">VVH4</span></a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VV14">Classical Archaeology and Ancient History (MA) <span class="ucasCode">VV14</span></a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=QV84">Classical Archaeology and Greek (MA) <span class="ucasCode">QV84</span></a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VQ46">Classical Archaeology and Latin (MA) <span class="ucasCode">VQ46</span></a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=Q800">Classics (MA) <span class="ucasCode">Q800</span></a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VV1K">History and Archaeology (MA) <span class="ucasCode">VV1K</span></a>
+</li><li><a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&amp;code=VV94">Scottish Ethnology and Archaeology (MA) <span class="ucasCode">VV94</span></a>
+</li>							</ul>
+                  							    			</div>
+    		</div>
+
+    	</div>
+
+    </div>
+
+</section>
+  </div>
+
+    
+          <small class="article-published">This article was published on <time datetime="2022-02-28" itemprop="dateModified">28 Feb, 2022</time></small>
+        </div>
+  </div>
+
+</div>
+
+<footer>
+      
+          <div class="footer-subsite-content">
+        <div class="container">
+          <div class="row">
+                          <div class="col-sm-6 col-md-8">
+                        <p><a class="uoe-node-link uoe-published" data-uoe-button="chevron-right" href="https://www.ed.ac.uk/studying/admissions/privacy-statement" >Privacy statement for applicants</a></p>
+
+<p><a data-uoe-button="chevron-right" href="https://edin.ac/terms">Terms and conditions of admission</a> </p>
+
+<p><a class="uoe-node-link uoe-published" data-uoe-button="chevron-right" href="https://www.ed.ac.uk/studying/admissions/policies-procedures" >Admissions policies and procedures</a></p>
+
+<p> </p>
+            </div>
+                                      <div class="col-sm-6 col-md-4">
+                <a href="https://www.ed.ac.uk/studying/undergraduate/contacts" class="btn btn-uoe btn-sm">Contact us <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>              </div>
+                      </div>
+        </div>
+      </div>
+      
+    <div class="footer-discover">
+    <div class="container">
+      <h3>The University of Edinburgh</h3>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-4">
+          <ul>
+            <li><a href="https://www.ed.ac.uk/about/website/website-terms-conditions">Terms &amp; conditions</a></li>
+                          <li>
+                <a href="https://www.ed.ac.uk/about/website/privacy">Privacy &amp; cookies</a>
+              </li>
+                        <li><a href="https://www.ed.ac.uk/university-secretary-group/complaint-handling-procedure">Complaints procedure</a></li>
+            <li><a href="https://www.ed.ac.uk/sustainability/modern-slavery-statement">Modern slavery</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-4">
+          <ul>
+                          <li>
+                <a href="https://www.ed.ac.uk/about/website/accessibility">Website accessibility</a>
+              </li>
+                        <li><a href="https://www.ed.ac.uk/about/website/freedom-information">Freedom of information publication scheme</a></li>
+            <li><a href="https://www.ed.ac.uk/data-protection">Data Protection</a></li>
+          </ul>
+        </div>
+                  <div class="col-sm-4 col-xs-6">
+            <a href="https://www.ed.ac.uk/about/mission-governance/affiliations">
+              <img class="pull-right img-responsive" alt="University affiliations" src="https://www.ed.ac.uk/sites/all/themes/uoe/assets/footer-affiliations.png"/>
+            </a>
+           </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-sm-push-8 text-right">
+          <a class="btn btn-uoe btn-sm" href="https://www.myed.ed.ac.uk/"> MyEd login <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+        </div>
+        <div class="col-sm-8 col-sm-pull-4">
+          <p>
+            The University of Edinburgh is a charitable body, registered in Scotland, with registration number
+            SC005336, VAT Registration Number GB&nbsp;592&nbsp;9507&nbsp;00, and is acknowledged by the UK authorities as a
+            &ldquo;<a href="https://www.gov.uk/guidance/recognised-uk-degrees">Recognised body</a>&rdquo; which has been
+            granted degree awarding powers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container container-footer-copyright">
+    <div class="copyright">
+      <p>Unless explicitly stated otherwise, all material is copyright &copy; The University of Edinburgh 2022.</p>
+    </div>
+  </div>
+
+      <div class="container text-right">
+      <a rel="nofollow" class="footer-login-link" href="https://www.ed.ac.uk/user/login?destination=node/28392"> <abbr class="initialism">CMS</abbr> login <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+    </div>
+  
+  </footer>
+  <script src="https://www.ed.ac.uk/sites/default/files/js/js_7Ukqb3ierdBEL0eowfOKzTkNu-Le97OPm-UqTS5NENU.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-626e96c9d654b24db05","applicationID":"1048607077","transactionName":"blUGYkcDXxcAAkEKWlcfJVVBC14KThRaBmpJQgtOTD1fCwUEahNUXlU7QFwHRg==","queueTime":0,"applicationTime":590,"atts":"QhIFFA8ZTBk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&code=VL46 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Apr 2022 18:45:00 GMT -->
+</html>

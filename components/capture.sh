@@ -1,22 +1,22 @@
 #!/bin/bash
 
-DURATION="$1"
-export CONCURRENT_THREADS="$2"
-export REQUESTS="$3"
-export CAPTURETIME=`date +%Y-%m-%d_%H-%M-%S`
-REPEAT="$4"
+export BROWSER="$1"
+export REPEAT="$2"
+export MODE="$3"
 
+[ -z "$BROWSER" ] && BROWSER=chrome
+[ -z "$REPEAT" ] && REPEAT=3
+[ -z "$MODE" ] && MODE=quic
 
-[ -z "$DURATION" ] && DURATION=30
-[ -z "$REPEAT" ] && REPEAT=1
-[ -z "$CONCURRENT_THREADS" ] && CONCURRENT_THREADS=1
-[ -z "$REQUESTS" ] && REQUESTS=20
+DURATION=$(expr 30 '*' $REPEAT + 10)
+
+echo "${BROWSER} browser in ${MODE} mode for $REPEAT times"
 
 function bringup {
     echo "Start the containerised applications..."
-    export DATADIR="$PWD/data"
+    export DATADIR="./data"
 
-    docker-compose --no-ansi --log-level ERROR up -d 
+    docker-compose --no-ansi --log-level ERROR up -d
 }
 
 function teardown {
@@ -27,29 +27,14 @@ function teardown {
     echo "Done."
 }
 
-function add_delays {
-    echo "Adding delays to the network..."
-    DELAY1=$((RANDOM % 100 + 1))
-    DELAY2=$((RANDOM % 100 + 1))
-    DELAY3=$((RANDOM % 100 + 1))
-
-
-    ./container_tc.sh capture-022-nginxssl_nginx_1 $DELAY1
-    ./container_tc.sh capture-022-nginxssl_wget_80_1 $DELAY2
-    ./container_tc.sh capture-022-nginxssl_wget_443_1 $DELAY3
-}
-
 trap '{ echo "Interrupted."; teardown; exit 1; }' INT
 
-for ((i=1; i<=REPEAT; i++))
+while read line
 do
-    echo "Repeat Nr " $i
-    export REPNUM=$i
-    
+    export URL=$line
+    echo $URL
     bringup;
-#    add_delays;
-    echo "Capturing data now for $DURATION seconds...."
     sleep $DURATION
     teardown;
-done
+done < websites.csv
 

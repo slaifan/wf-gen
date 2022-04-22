@@ -6,7 +6,7 @@ USER root
 RUN apt-get update
 RUN apt-get install -y python3 python3-pip iputils-ping curl 
 
-COPY ./src/ /src/
+# COPY ./src/ /src/
 
 RUN pip install --upgrade pip && pip install -r /src/requirements.txt
 

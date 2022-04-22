@@ -1,36 +1,6 @@
 version: '3.7'
 
-
 services:
-
-### TO DO: ADD WIREGUARD SERVER CONTAINER, ADD CONFIG TO EXISTING WG CLIENT VOLUME, GIVE THEM DIFFERENT IPS
-
-  # wireguard-server:
-  #   image: linuxserver/wireguard
-  #   container_name: wireguard-server
-  #   cap_add:
-  #     - NET_ADMIN
-  #     - SYS_MODULE
-  #   environment:
-  #     - PUID=1000
-  #     - PGID=1000
-  #     - TZ=Europe/London
-  #     - SERVERPORT=51820 #optional
-  #     - PEERS=1 #optional
-  #     - PEERDNS=auto #optional
-  #     - INTERNAL_SUBNET=10.13.13.0 #optional
-  #   volumes:
-  #     - ./wireguard/:/config
-  #     - /lib/modules:/lib/modules
-  #   ports:
-  #     - 51820:51820/udp
-  #   sysctls:
-  #     - net.ipv4.conf.all.src_valid_mark=1
-  #   restart: unless-stopped
-  #   # networks:
-  #   #   backbone:
-  #   #     ipv4_address: 172.16.236.33
-
   wireguard-client:
     image: linuxserver/wireguard
     container_name: wireguard-client
@@ -49,14 +19,16 @@ services:
       - SYS_MODULE
     ports:
       - 4444:4444
+      - 4445:4445
+      - 4446:4446
       - 7900:7900
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
       - net.ipv6.conf.all.disable_ipv6=0
 
-  selenium:
-    image: selenium/standalone-chrome:4.1.3-20220405
-    container_name: selenium
+  browser:
+    image: selenium/standalone-${BROWSER}:4.1.3-20220405
+    container_name: browser
     shm_size: 2g
     restart: always
     network_mode: service:wireguard-client
@@ -64,11 +36,16 @@ services:
   client:
     depends_on:
       - wireguard-client
-      - selenium
+      - browser
     build: './client'
     container_name: client
     volumes:
       - './client/src:/src/'
+    environment:
+      REPEAT: ${REPEAT}
+      URL: ${URL}
+      BROWSER: ${BROWSER}
+      MODE: ${MODE}
     network_mode: service:wireguard-client
 
   dummy:
@@ -80,37 +57,28 @@ services:
       
   tcpdump_client:
     build: './tcpdump'
-    command: not(ip6) -v -w "/data/dump-client-${CAPTURETIME}-$REPNUM.pcap"
+    command: not(ip6) -v -w "/data/user-${BROWSER}-${MODE}-${URL}.pcap"
     volumes:
       - './data:/data'
     network_mode: "service:client"
     depends_on:
       - dummy
       
-  tcpdump_eve:
+  eve:
     build: './tcpdump'
     container_name: eve
-    network_mode: "host"
+    network_mode: "host" ## only way to sniff traffic on same host is by listening to Linux bridge of Host (I shit you not, there was one guy who asked it on three sites and wrote the reply himself after)
     cap_add:
       - NET_RAW
       - NET_ADMIN
     ports:
       - 51820:51820
     privileged: true
-    command: host 172.16.236.44 udp -i any -v -w "/data/dump-adversary-${CAPTURETIME}-$REPNUM.pcap"
+    command: host 172.16.236.44 -i any -v -w "/data/eve-${BROWSER}-${MODE}-${URL}.pcap"
     volumes:
       - './data:/data'
     depends_on:
       - dummy
-
-  # tcpdump_vpn:
-  #   build: './tcpdump'
-  #   command: not(ip6) -v -w "/data/dump-vpn-server-${CAPTURETIME}-$REPNUM.pcap"
-  #   volumes:
-  #     - './data:/data'
-  #   network_mode: "service:wireguard-server"
-  #   depends_on:
-  #     - dummy
 
 networks:
   backbone:
